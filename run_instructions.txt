@@ -1,0 +1,9 @@
+Hello this instruction will show you how to run htmlOS on android device.
+1.Extract htmlOS.zip archive to /sdcard folder 
+2.Open Google Chrome(or any other wich supports File System API)browser
+3.Open this file in browser by typing file:///sdcard/htmlOS/GRUB.html
+
+
+
+
+PROFIT!!!)
