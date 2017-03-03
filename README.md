@@ -1,2 +1,2 @@
 # htmlOS-master
-OS written on HTML and JavaScript
+Server control system written on HTML and JavaScript
