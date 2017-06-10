@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>HTML5 Battery API - Hongkiat.com</title>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script>
+$(document).ready(function() {
+	var battery  = navigator.battery || navigator.mozBattery,
+		level	 = battery.level * 100,
+		levelBar = $('.level');
+	
+	if (battery.charging) {
+		levelBar.addClass('charging');
+	} else if (level > 65) {
+		levelBar.addClass('high');
+	} else if (level >= 35 ) {
+		levelBar.addClass('med');
+	} else {
+		levelBar.addClass('low');
+	};
+
+	if (!battery.charging) {
+		levelBar.css('width', level + '%');
+	};
+});
+</script>
+</head>
+
+<body>
+<div class="demo-wrapper">
+	<div class="attention">
+		View this demo in the latest Firefox, otherwise it does not work.
+	</div>
+
+	<div class="battery">
+		<div class="level">
+				
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

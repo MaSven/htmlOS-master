@@ -1,0 +1,88 @@
+
+ <style>
+            body {text-align: center;}
+            #drag { border: 10px solid black; text-align: center; padding:20px; width: 500px; margin: auto; font-size: 40px; display: inline-block;}
+            #einput {width:400px;}
+            #output {margin:20px;}
+            #filesinput, #directoryinput, #zipinput {
+                visibility: collapse;
+                width: 0px;
+            }
+            #output img{
+                border: 5px solid #333;
+                margin-right: 2px;
+            }
+        </style>
+
+        <div id="drag">DROP!
+            <button id="fbutton">Select File(s)</button>
+            <button id="dbutton">Select Directory</button>
+            <button id="zbutton">Select Zip Archive</button>
+            <input id="einput" type="input" placeholder="External Image URL"><button id="external">Submit</button>
+        </div>
+        <input type="file" id="filesinput" multiple>
+        <input type="file" id="directoryinput" multiple webkitdirectory>
+        <input type="file" accept="application/zip" id="zipinput">
+
+
+        <div id="output"></div>
+        <div id="error"></div>
+
+<script>
+            var files = document.getElementById("filesinput");
+            var directory = document.getElementById("directoryinput");
+            var zipinput = document.getElementById("zipinput");
+            var external = document.getElementById("external");
+            var fbutton = document.getElementById("fbutton");
+            var dbutton = document.getElementById("dbutton");
+            var zbutton = document.getElementById("zbutton");
+
+            //process files
+            files.addEventListener("change", function (e) {
+                var files = e.target.files;
+                for(i=0; i<files.length; i++) {
+                    var file = files[i];
+                    if(file.type.match(/image.*/)){
+                        upload(file);
+                    }
+                }
+            }, false);
+
+            //process directory
+            directory.addEventListener("change", function (e) {
+                var files = e.target.files;
+                for (var i=0; i<files.length; i++) {
+                    var file = files[i];
+                    if(file.type.match(/image.*/)){
+                        upload(file);
+                    }
+                }            
+            }, false);
+
+            //process zip archive
+            zipinput.addEventListener('change', function() {
+                unzip(zipinput.files[0]);
+            }, false);
+
+
+            external.addEventListener("click", function (e) {
+                var einput = document.getElementById("einput");
+                var file = einput.value;
+                //matching for ending here is not ideal since lots of image are auto generated via some other url
+                //if (file.match(/\.jpg|\.gif|\.jpeg|\.png/)){
+                    upload(file);
+                //}
+            }, false);
+
+            fbutton.addEventListener("click", function() {
+                document.getElementById('filesinput').click();
+            }, false);
+
+            dbutton.addEventListener("click", function() {
+                document.getElementById('directoryinput').click()
+            }, false);
+
+            zbutton.addEventListener("click", function() {
+                document.getElementById('zipinput').click()
+            }, false);
+</script>

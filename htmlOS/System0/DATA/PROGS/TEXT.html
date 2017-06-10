@@ -1,0 +1,17 @@
+<html>
+<head>
+<base href="file:///sdcard/htmlOS/System0/DATA/PROGS/DATA/NOTEPAD/"/>
+<script>
+window.onload = function(){
+    var iframe = document.createElement('iframe');
+    iframe.id = 'iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    iframe.src = 'mytext.txt';
+    setTimeout(function(){
+        var text = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
+        alert(text);
+    }, 1000);
+}
+</script>
+</head>

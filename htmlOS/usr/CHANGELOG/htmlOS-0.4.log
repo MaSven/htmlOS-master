@@ -1,0 +1,6 @@
+Version 0.0.4
+API updated to version number 0.0.3 indev
+x86 arch support added to htmlOS(thanks to copy.sh)
+Added x86emu
+Starting from this version this technologies and software are protected by "Public GNU License v3"(copy avalible in /etc/COPYRIGHT)
+

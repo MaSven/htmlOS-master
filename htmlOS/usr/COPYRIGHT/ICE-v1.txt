@@ -1,0 +1,12 @@
+ICE.inc Copyright
+htmlOS™ is registered trademark of ICE incorporation
+1. All of the technologies which are created by ICE are protected by this copyright.
+2. NOONE of this technologies can't be redistributed without permission of the developer and publisher.
+3. They can't be advertised at the services such as adf.ly
+4. All non-native software which are included with OS are protected by GNU Public License.
+5. Pirate copies of the OS shouldn't be distributed(Limitations below)
+
+LIMITATIONS
+Pirate OSes can't be updated OverTheAir.(Choose wisely)
+Support of the services such as ICE Security are disabled.
+Your IP Adress will be banned soon since from first time you used Pirate copy.

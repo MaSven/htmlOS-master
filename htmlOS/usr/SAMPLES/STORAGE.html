@@ -1,0 +1,11 @@
+STORAGE
+<script>
+#!/usr/bin/env node
+var disk = require('diskusage');
+
+// get disk usage. Takes mount point as first parameter
+disk.check('/', function(err, info) {
+    console.log(info.free);
+    console.log(info.total);
+});
+</script>

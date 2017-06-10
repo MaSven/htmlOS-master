@@ -1,0 +1,49 @@
+
+<head>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div align="center" id="txt"></div>
+<style type="text/css">
+.button {
+	position:absolute;
+	bottom:-0px;
+	left:0;
+	width:190px;
+	height:100px;
+	line-height:30px;
+	text-align:center;
+}
+</style>
+<input type= "image" src= "HOME.png"
+  class="button2" align= "bottom"
+  onclick="window.location='/sdcard/htmlOS/System0/GUI/LAUNCHER/LAUNCHER.html ';" >
+ <style type="text/css">
+.button2 {
+	position:absolute;
+	bottom:-0px;
+	left:160;
+	width:190px;
+	height:100px;
+	line-height:30px;
+	text-align:center;
+}
+</style>

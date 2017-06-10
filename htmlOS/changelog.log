@@ -1,0 +1,51 @@
+VERSION 0.0.1
+API Updated to 0.1
+Button support added to GUI
+onClick redirect support
+JavaScript Support
+CSS Support
+
+
+
+Version 0.0.2
+API updated to 0.2 alpha
+Added support of Progress bars to GUI
+Added new software to prevent damage to data.
+ICA Security(Engine sources in /usr)
+
+
+
+Version 0.0.3
+Added support of animated progress bar
+Added support of voice detection
+Scan Engine improved
+Clock added
+
+
+Version 0.0.4
+API updated to version number 0.0.3 indev
+x86 arch support added to htmlOS(thanks to copy.sh)
+Added x86emu
+Starting from this version this technologies and software are protected by "Public GNU License v3"(copy avalible in /usr/COPYRIGHT)
+
+
+
+Version 0.0.5
+API updated to 0.0.3 Alpha
+Command Shell added
+Terminal added(starting from this version of OS it should propertly wolk only in Chrome Web Browser)
+
+
+
+VERSION 0.0.6
+Fully changed design of the Launcher
+Added support of images(acting like a button)
+Starting from this wersion OS is protected by ICE copyright
+
+
+
+VERSION 0.0.7
+API updated to 0.0.4
+Added switch support
+Settings added
+Soft nav-buttons added
